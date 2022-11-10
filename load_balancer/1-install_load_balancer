@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# load balancer
+# load balancer roundrobin algorithm
 sudo apt update -y
 sudo apt install haproxy -y
 echo 'ENABLED=1' | sudo tee -a /etc/default/haproxy
 printf %s 'backend webservers
         balance roundrobin
-        server 4822-web-01 52.90.100.15:80 check
+        server 4822-web-01 54.147.38.239:80 check
         server 4822-web-02 3.208.24.41:80 check
         option httpchk
 
