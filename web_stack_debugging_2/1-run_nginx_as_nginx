@@ -5,5 +5,6 @@ chmod 777 /etc/nginx/nginx.conf
 sed -i 's/80 default_server/8080 default_server/' /etc/nginx/sites-available/default
 sed -i '1iuser nginx;' /etc/nginx/nginx.conf
 
-pkill apache2
-su nginx -s /bin/bash -c 'service nginx restart'
+lsof -ti tcp:8080 | xargs kill
+echo nginx:1221 | chpasswd
+sudo -u nginx service nginx restart
