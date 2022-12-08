@@ -7,4 +7,4 @@ The web stack in debug is a Wordpress website running on a LAMP stack.
 
 Hint:
 >> strace can attach to a current running process
->> You can use tmux to run strace in one window and curl in another one
+>>> You can use tmux to run strace in one window and curl in another one
