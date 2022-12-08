@@ -1,5 +1,5 @@
 # Nginx service; increase ULIMIT
-service { '/nginx':
+service { 'nginx':
   ensure => running,
 }
 
